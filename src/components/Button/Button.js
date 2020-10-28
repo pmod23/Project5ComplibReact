@@ -1,10 +1,23 @@
 import React from 'react';
+import './btn.css';
 
-// This is a functional component - just sent up a little differently as an arrow function!
-const Button = (props) => (
-    <button>
-        {props.label}
-    </button>
-)
+const Button = (props) => {
 
-export default Button; 
+    console.log(props);
+
+    const classes = ['btn'];
+    if (props.type) classes.push(props.type);
+    if (props.outlined || props.outline) classes.push('outlined');
+    if (props.faded) classes.push('faded');
+    if (props.size) classes.push(props.size);
+    if (!props.children) classes.push('icon-only');
+
+    const buttonText = props.children ? <span>{props.children}</span> : '';
+
+    return (
+        <button className={classes.join(' ')}>{props.icon || ''}{buttonText}</button>
+    );
+
+};
+
+export default Button;

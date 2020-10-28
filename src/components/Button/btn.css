@@ -1,0 +1,107 @@
+:root {
+  --default: #22262a;
+  --primary: #33a0ff;
+  --success: #0ad00a;
+  --warning: #ffc600;
+  --danger: #ff4858;
+}
+
+.btn {
+  --btn-color: var(--default);
+  --btn-color-dark: var(--default-dark);
+
+  --text-color: #fff;
+  --bg-color: var(--btn-color);
+
+  --btn-border: none;
+
+  --btn-font-size: 1.6rem;
+  --btn-padding: 1.2rem 3rem;
+
+  background-color: transparent;
+  color: var(--text-color);
+
+  border: var(--btn-border);
+  border-radius: 0.5rem;
+
+  padding: var(--btn-padding);
+  font-size: var(--btn-font-size);
+
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.btn .icon:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.btn::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  height: 100%;
+  width: 100%;
+
+  background-color: var(--bg-color);
+}
+
+.btn:hover::before,
+.btn.primary:hover::before,
+.btn.danger:hover::before,
+.btn.success:hover::before,
+.btn.warning:hover::before {
+  filter: brightness(90%);
+}
+
+.btn.primary {
+  --btn-color: var(--primary);
+}
+.btn.danger {
+  --btn-color: #ff4858;
+}
+.btn.success {
+  --btn-color: #0ad00a;
+}
+.btn.warning {
+  --btn-color: #ffc600;
+}
+
+.btn.outlined {
+  --btn-border: 2px solid var(--btn-color);
+  --bg-color: transparent;
+  --text-color: var(--btn-color);
+}
+
+.btn.faded {
+  --text-color: var(--btn-color);
+}
+
+.btn.faded::before {
+  opacity: 0.15;
+}
+
+.btn.large {
+  --btn-font-size: 2.4rem;
+  --btn-padding: 1.6rem 4rem;
+}
+
+.btn.icon-only {
+  height: 5rem;
+  width: 5rem;
+
+  padding: 0;
+  justify-content: center;
+}
+
+.btn.icon-only.large {
+  height: 6rem;
+  width: 6rem;
+}

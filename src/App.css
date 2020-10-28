@@ -1,0 +1,6 @@
+.app-container {
+  padding: 5rem;
+}
+.app-container > *:not(:last-child) {
+  margin-bottom: 4rem;
+}

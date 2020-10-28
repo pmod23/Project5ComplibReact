@@ -1,33 +1,10 @@
-*,
-*::after,
-*::before {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  /* Base Font size is normally 16px but we made it 10px */
-  font-size: 62.5%;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  box-sizing: border-box;
-  font-size: 1.6rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-:root {
-  --default: #22262a;
-  --primary: #33a0ff;
-  --success: #0ad00a;
-  --warning: #ffc600;
-  --danger: #ff4858;
 }
 
 code {

@@ -1,0 +1,40 @@
+
+
+.number-input {
+
+    display: flex;
+    align-items: center;
+
+    background-color: #F6F7F8;
+    border-radius: 5px;
+    width: max-content;
+
+}
+
+.number-input span {
+    padding: 1rem;
+    display: block;
+    color: #33A0FF;
+}
+
+.number-input input {
+    width: 4rem;
+    display: block;
+    height: 100%;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+
+    text-align: center;
+
+    -moz-appearance:textfield;
+    
+}
+
+.number-input input::-webkit-outer-spin-button,
+.number-input input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

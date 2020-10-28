@@ -1,0 +1,30 @@
+.text-input {
+
+    display: flex;
+    flex-direction: column;
+
+    width: 25rem;
+    align-items: flex-start;
+
+    label {
+        margin-bottom: 1rem;
+    }
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+
+        border: 2px solid #cfcfcf;
+        border-radius: .5rem;
+
+        &.md {
+            padding: 1.5rem 1rem;
+        }
+
+        &.lg {
+            padding: 2rem 1rem;
+        }
+    }
+
+}
